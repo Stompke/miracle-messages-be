@@ -21,6 +21,10 @@ exports.up = function(knex, Promise) {
     tbl.boolean("joinmm").defaultTo(false);
     tbl.boolean("mediacoverage").defaultTo(false);
     tbl.string("somethingelse", 128);
+
+    //Password Reset
+    tbl.string("resetPasswordToken", 128);
+    tbl.integer("resetPasswordExpires");
   });
 };
 
