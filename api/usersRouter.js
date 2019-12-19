@@ -29,10 +29,6 @@ router.post("/register", restricted, async (req, res) => {
 router.post("/login", (req, res) => {
   let { username, password } = req.body;
 
-  // const hash = bcrypt.hashSync(password, 10);
-  // console.log(hash);
-  // console.log(bcrypt.compareSync(password, hash));
-
   Users.findBy({ username })
     .first()
     .then(user => {
