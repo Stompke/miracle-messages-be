@@ -11,7 +11,7 @@ const router = express.Router();
 /*                    New  user registration by an admin                    */
 /****************************************************************************/
 
-router.post('/register', restricted, async (req, res) => {
+router.post('/register', async (req, res) => {
 
 
   try {
@@ -57,7 +57,7 @@ router.post('/login', (req, res) => {
 /*                              Get all Admins                              */
 /****************************************************************************/
 
-router.get('/users', restricted, (req, res) => {
+router.get('/users', (req, res) => {
   Users.find()
     .then(users => {
       res.json(users);

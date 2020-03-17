@@ -1,8 +1,8 @@
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('interests')
-    .truncate()
-    .then(function() {
+  // return knex('interests')
+    // .truncate()
+    // .then(function() {
       // Inserts seed entries
       return knex('interests').insert([
         {
@@ -190,5 +190,5 @@ exports.seed = function(knex) {
           somethingelse: 'Yellow'
         }
       ]);
-    });
+    // });
 };

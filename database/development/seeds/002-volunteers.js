@@ -1,8 +1,8 @@
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('volunteers')
+  // return knex('volunteers')
     // .truncate()
-    .then(function() {
+    // .then(function() {
       // Inserts seed entries
       return knex('volunteers').insert([
         {
@@ -236,5 +236,5 @@ exports.seed = function(knex) {
           comment: 'No comment'
         }
       ]);
-    });
+    // });
 };
